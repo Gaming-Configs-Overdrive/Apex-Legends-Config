@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 This file is based on the Semver-Model ('Added', 'Changed', 'Removed')
 
+## [1.0.3] - fix for audio bugs
+
+✨ feat(audio): increase audio channels and speakers
+
+### Changed
+
+- update miles_channels and sound_num_speakers to support 8 channels
+- enhance audio experience with virtual 7.1 to fix sound direction bug that appears for some
+
+## [1.0.2] - tidy up and rework repo
+
+just wording and making things useable for you
+
 ## [1.0.1] - unitize Zip
 
 ♻️ refactor(zipUtils): normalize zip filenames

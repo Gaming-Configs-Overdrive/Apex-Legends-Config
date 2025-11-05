@@ -14,14 +14,14 @@ export function createZip(files, outputZipPath) {
 function normalizeFilename(filename) {
   // Prüfe auf autoexec.*.cfg
   if (/^autoexec.*\.cfg$/i.test(filename)) {
-      return "autoexec.cfg";
+    return 'autoexec.cfg'
   }
 
   // Prüfe auf videoconfig.*.txt
   if (/^videoconfig.*\.txt$/i.test(filename)) {
-      return "videoconfig.txt";
+    return 'videoconfig.txt'
   }
 
   // Wenn keine der Bedingungen zutrifft, gib den Originalnamen zurück
-  return filename;
+  return filename
 }
