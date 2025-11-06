@@ -14,6 +14,17 @@ export default function buildReleasePlugin(options) {
   return {
     name: 'build-release-plugin',
     buildEnd() {
+      const installScriptPath = path.join(
+        __dirname,
+        '../utils/install-windows-config.ps1'
+      )
+
+      if (!fs.existsSync(installScriptPath)) {
+        throw new Error(
+          `Installationsskript nicht gefunden: ${installScriptPath}`
+        )
+      }
+
       // Sicherstellen, dass das outputDir existiert
       fs.mkdirSync(path.join(__dirname, outputDir), { recursive: true })
 
@@ -41,7 +52,9 @@ export default function buildReleasePlugin(options) {
         const zipName = `${autoexecBase}_${videoconfigBase}.zip`
         const zipPath = path.join(__dirname, outputDir, zipName)
 
-        createZip([autoexec, videoconfig], zipPath)
+        const filesToInclude = [autoexec, videoconfig, installScriptPath]
+
+        createZip(filesToInclude, zipPath)
         console.log(`Erzeugt Release-Paket: ${zipPath}`)
       })
     },

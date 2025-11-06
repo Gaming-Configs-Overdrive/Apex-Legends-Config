@@ -40,6 +40,16 @@ Diese Anleitung zeigt dir, wie du speziell abgestimmte Konfigurationsdateien fü
      `%USERPROFILE%\Saved Games\Respawn\Apex\local`
    - Kopiere die `videoconfig.txt` in dieses Verzeichnis und überschreibe ggf. die vorhandene Datei.
 
+### Schnelle Windows-Installation mit PowerShell
+
+Für Windows-Anwender steht ein Skript zur Verfügung, das beide Dateien automatisch kopiert und anschließend schreibschützt:
+
+1. Entpacke das heruntergeladene Release-ZIP – `install-windows-config.ps1` liegt dort bereits zusammen mit den `autoexec*.cfg`- und `videoconfig*.txt`-Varianten.
+2. Öffne den entpackten Ordner, klicke mit der rechten Maustaste auf `install-windows-config.ps1` und wähle **„Mit PowerShell ausführen“**. Alternativ kannst du über `Shift + Rechtsklick` → „PowerShell-Fenster hier öffnen“ starten und den Befehl `.\install-windows-config.ps1` ausführen.
+3. Folge den Abfragen. Das Skript erkennt die Konfigurationsdateien automatisch, kopiert sie an die in der Anleitung genannten Pfade und setzt beide Dateien auf „Schreibgeschützt“, damit sie nicht vom Spiel überschrieben werden.
+
+Wenn du später Änderungen an den Dateien vornehmen möchtest, entferne den Schreibschutz kurzzeitig (z. B. mit `attrib -r <Dateiname>`) und führe das Skript anschließend erneut aus.
+
 4. **Startoptionen im Spiel:**  
    - Öffne deine Apex Legends Bibliothek in Steam.
    - Klicke mit Rechtsklick auf das Spiel und wähle "Eigenschaften".

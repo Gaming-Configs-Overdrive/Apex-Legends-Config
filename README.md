@@ -40,6 +40,16 @@ This guide explains how to use specially tailored configuration files for Apex L
      `%USERPROFILE%\Saved Games\Respawn\Apex\local`
    - Copy `videoconfig.txt` into this directory, overwriting the existing file if necessary.
 
+### Windows Quick Install Script
+
+To make setup easier on Windows, the repository contains a helper script that copies both files to the correct folders and flags them as read-only:
+
+1. Extract the release ZIP you downloaded—`install-windows-config.ps1` is already included alongside the `autoexec*.cfg` and `videoconfig*.txt` variants.
+2. Inside the extracted folder, right-click `install-windows-config.ps1` and choose **“Run with PowerShell.”** You can also open a PowerShell window there (`Shift + Right Click` → “Open PowerShell window here”) and run `.\install-windows-config.ps1`.
+3. Answer the prompts. The script auto-detects the config files, copies them to the recommended locations, and marks both as read-only so the game can’t overwrite them.
+
+If you need to edit the files later, remove the read-only attribute first (for example with `attrib -r <filename>`) and rerun the script when you’re done.
+
 4. **Game Launch Parameters:**  
    - In your Steam Library, right-click Apex Legends and select "Properties".
    - Go to the "General" tab.

@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 This file is based on the Semver-Model ('Added', 'Changed', 'Removed')
 
+## [1.0.4] - add Windows quick install script instructions
+
+📦 build(utils): add PowerShell install script for Windows configuration
+
+### Added
+
+- create a new script to automate the installation of config files
+- script copies files to appropriate directories and sets them to read-only
+- include the install script path when creating the release ZIP package
+- explain how to run the script for automatic file copying and locking
+
 ## [1.0.3] - fix for audio bugs
 
 ✨ feat(audio): increase audio channels and speakers
