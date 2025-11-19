@@ -54,7 +54,6 @@ function Select-ConfigFile {
         Write-Host ("[{0}] {1}" -f $i, $candidate.Name)
         $i++
     }
-
     while ($true) {
         $selection = Read-Host "Enter the number for $Description"
         $parsed = 0
